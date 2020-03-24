@@ -1,0 +1,5 @@
+rootProject.name='Calculator'
+include ':app'
+include ':navigation'
+include ':common'
+include ':features:calculatorfeature'

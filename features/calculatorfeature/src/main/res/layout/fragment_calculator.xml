@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.modular.calculatorfeature.CalculatorViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".CalculatorFragment">
+
+
+        <TextView
+            android:id="@+id/fragmentCalculatorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:textSize="24dp"
+            android:text="@{viewmodel.operationText}"
+            android:gravity="center|right"
+            android:textColor="#000000" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragmentCalculatorTextView"
+            android:layout_marginTop="48dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:divider="?android:attr/dividerVertical"
+                android:background="@drawable/divider"
+                android:showDividers="middle"
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator7tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="7"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator8tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="8"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator9tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="9"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculatorPlustv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textSize="18dp" />
+            </TableRow>
+            <TableRow
+                android:divider="?android:attr/dividerVertical"
+                android:background="@drawable/divider"
+                android:showDividers="middle"
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator4tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="4"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator5tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="5"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator6tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="6"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculatorMinustv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="-"
+                    android:gravity="center"
+                    android:textSize="18dp" />
+            </TableRow>
+            <TableRow
+                android:divider="?android:attr/dividerVertical"
+                android:background="@drawable/divider"
+                android:showDividers="middle"
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator1tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="1"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator2tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="2"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculator3tv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text="3"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:onClick="@{(v)->viewmodel.addOperationOrNumber(v)}"
+                    android:id="@+id/fragmentCalculatorDecimaltv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#b0b0b0"
+                    android:text=","
+                    android:gravity="center"
+                    android:textSize="18dp" />
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/table"
+            android:onClick="@{()->viewmodel.calculateOperation()}"
+            android:id="@+id/fragmentCalculatorEqualstv"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#b0b0b0"
+            android:text="="
+            android:gravity="center"
+            android:textSize="18dp" />
+    </RelativeLayout>
+</layout>

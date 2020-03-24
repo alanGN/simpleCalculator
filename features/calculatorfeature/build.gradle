@@ -1,0 +1,24 @@
+apply plugin: 'kotlin-kapt'
+apply from: '../../android_feature_dependencies.gradle'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled true
+    }
+    testOptions {
+        animationsDisabled = true
+    }
+}
+
+dependencies {
+    // GLIDE
+    implementation Libraries.glide
+    //Expression calculator
+    implementation Libraries.expressionCalculator
+}
